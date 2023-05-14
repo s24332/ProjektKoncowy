@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3b5e2128b67de814f9fdef70b0916446
+guid: eff0bb57df904254c9e5ad1cdc338ba3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,18 +37,18 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 0
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,8 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d62aff3c0aa65fd4a96f0bb106e09095
-      internalID: -1333360477
+      spriteID: 54ab030f5be25ee439b543552e225ccf
+      internalID: -1617236439
       vertices: []
       indices: 
       edges: []
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c48972da3ade4d24ea990e0543dd7f79
-      internalID: 1387090957
+      spriteID: ae20c50969a3ad1438c6fd29455b5a0e
+      internalID: -954898961
       vertices: []
       indices: 
       edges: []
@@ -159,8 +159,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Rzabol-Jump_0: -1333360477
-      Rzabol-Jump_1: 1387090957
+      Rzabol-Jump_0: -1617236439
+      Rzabol-Jump_1: -954898961
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
