@@ -8,39 +8,34 @@ public class JezMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator anim;
-
-    public float upForce = 100;
+    
+    public float upForce = 300;
     public float speed = 1500;
-
+   
     public bool isGrounded = false;
 
+    public bool isDashing;
 
-    private bool canDash = true;
-    private bool isDashing;
-    private float dashingPower = 24f;
-    private float dashingTime = 0.2f;
-    private float dashingCooldown = 1f;
+    public float DashForce;
+    public float StartDashTime;
 
+    private float CurrentDashTimer;
+    private float DashDirection;
 
     void Start()
     {
-
+        
     }
 
 
     void Update()
     {
-
-        if (isDashing)
-        {
-            return;
-        }
-
-
         float move = Input.GetAxis("Horizontal");
+
         if (move == 0)
         {
             anim.SetBool("IsWalk", false);
+            anim.SetBool("IsDash", false);
 
         }
         else
@@ -54,28 +49,41 @@ public class JezMovement : MonoBehaviour
                 transform.localScale = new Vector3(-1, 1, 1);
             }
 
-
-
             anim.SetBool("IsWalk", true);
             rb.velocity = new Vector2(move * speed * Time.deltaTime, rb.velocity.y);
-
-
-            anim.SetFloat("yVelocity", rb.velocity.y);
 
         }
 
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            anim.SetBool("IsJump", true);
             rb.AddForce(Vector2.up * upForce);
             isGrounded = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && move != 0)
         {
-            StartCoroutine(Dash());
+            anim.SetBool("IsDash", true);
+            isDashing = true;
+            CurrentDashTimer = StartDashTime;
+            rb.velocity = Vector2.zero;
+            DashDirection = (int)move;
+
         }
+
+        if (isDashing)
+        {
+            rb.velocity = transform.right * DashDirection * DashForce;
+
+            CurrentDashTimer -= Time.deltaTime;
+            if (CurrentDashTimer <= 0)
+            {
+                isDashing = false;
+                anim.SetBool("IsDash", false);
+            }
+        }
+
+
 
     }
 
@@ -87,18 +95,6 @@ public class JezMovement : MonoBehaviour
 
     }
 
-    private IEnumerator Dash()
-    {
-        canDash = false;
-        isDashing = true;
-        float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
-        yield return new WaitForSeconds(dashingTime);
-        rb.gravityScale = originalGravity;
-        isDashing = true;
-        yield return new WaitForSeconds(dashingCooldown);
-        canDash = true;
-    }
+   
 
 }
