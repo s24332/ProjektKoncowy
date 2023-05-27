@@ -887,7 +887,7 @@ GameObject:
   - component: {fileID: 447709166}
   - component: {fileID: 447709165}
   - component: {fileID: 447709164}
-  - component: {fileID: 447709163}
+  - component: {fileID: 447709167}
   m_Layer: 0
   m_Name: CutSceneTrigger
   m_TagString: Untagged
@@ -895,18 +895,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &447709163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447709162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 383faccfdd7d04944a5bf6081b089a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &447709164
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1019,6 +1007,18 @@ Transform:
   m_Father: {fileID: 2019132746}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &447709167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447709162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a9e781cc3ebfd42871989c78f533c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &571299387
 GameObject:
   m_ObjectHideFlags: 0
