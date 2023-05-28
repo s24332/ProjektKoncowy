@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 773502ba1da85d644a16a10911f8ed41
+guid: 63505771cf2c6c7418aebfb26acb3214
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
@@ -105,112 +105,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Mis_Idle-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1
-        width: 32
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1e15e4c16f6b5b409c16a4236ab221b
-      internalID: -1564969908
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mis_Idle-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 1
-        width: 32
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83b80c545a1a35a4e871aa64c01ec841
-      internalID: 219521511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mis_Idle-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 1
-        width: 32
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7e29c96f12297b4fb1422432026089a
-      internalID: -870641281
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mis_Idle-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 1
-        width: 32
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8264c68f8f79ccc4ba7134f4ef5d1061
-      internalID: -436506207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mis_Idle-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 1
-        width: 32
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25c28e15fe7c3524a889550a6f9771a5
-      internalID: -215528455
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -221,12 +116,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Mis_Idle-Sheet_0: -1564969908
-      Mis_Idle-Sheet_1: 219521511
-      Mis_Idle-Sheet_2: -870641281
-      Mis_Idle-Sheet_3: -436506207
-      Mis_Idle-Sheet_4: -215528455
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
