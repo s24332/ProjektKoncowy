@@ -8,13 +8,18 @@ public class LevelLoader : MonoBehaviour
     public Animator transition;
 
     public float transitionTime = 1f;
-    void Update()
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            LoadNextLevel();
-        }
-    }    
+        LoadNextLevel();
+    }
+   // void Update()
+    //{
+    //    if(Input.GetMouseButtonDown(0))
+    //    {
+     //       LoadNextLevel();
+     //   }
+  //  }    
 
     public void LoadNextLevel()
     {
