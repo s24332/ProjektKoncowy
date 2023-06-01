@@ -8,6 +8,8 @@ public class RybaMovement : MonoBehaviour
     private Vector2 moveV;
     public float speed = 1500;
 
+    public AudioSource movementSound;
+
 
     void Start()
     {
@@ -19,6 +21,7 @@ public class RybaMovement : MonoBehaviour
     {
         Vector2 moveInput = new Vector2(0, Input.GetAxisRaw("Vertical"));
         moveV = moveInput * speed;
+        movementSound.enabled = true;
     }
 
     void FixedUpdate()

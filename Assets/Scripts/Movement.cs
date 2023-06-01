@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
 
     public bool isGrounded = false;
 
+    public AudioSource movementSound;
 
     void Start()
     {
@@ -29,10 +30,12 @@ public class Movement : MonoBehaviour
         if (move == 0)
         {
             anim.SetBool("IsWalk", false);
-            
+            movementSound.enabled = false;
+
         }
         else
         {
+            movementSound.enabled = true;
             if (move > 0)
             {
                 transform.localScale = new Vector3(1, 1, 1);
@@ -58,6 +61,7 @@ public class Movement : MonoBehaviour
             anim.SetBool("IsJump", true);
             rb.AddForce(Vector2.up * upForce);
             isGrounded = false;
+            movementSound.enabled = false;
         }
 
     }

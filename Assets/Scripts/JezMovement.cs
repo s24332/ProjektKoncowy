@@ -22,6 +22,8 @@ public class JezMovement : MonoBehaviour
     private float CurrentDashTimer;
     private float DashDirection;
 
+    public AudioSource movementSound;
+
     void Start()
     {
         
@@ -36,10 +38,12 @@ public class JezMovement : MonoBehaviour
         {
             anim.SetBool("IsWalk", false);
             anim.SetBool("IsDash", false);
+            movementSound.enabled = false;
 
         }
         else
         {
+            movementSound.enabled = true;
             if (move > 0)
             {
                 transform.localScale = new Vector3(1, 1, 1);
@@ -59,6 +63,7 @@ public class JezMovement : MonoBehaviour
         {
             rb.AddForce(Vector2.up * upForce);
             isGrounded = false;
+            movementSound.enabled = false;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && move != 0)

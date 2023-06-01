@@ -14,6 +14,8 @@ public class MisMovement : MonoBehaviour
 
     public bool isGrounded = false;
 
+    public AudioSource movementSound;
+
 
     void Update()
     {
@@ -23,10 +25,11 @@ public class MisMovement : MonoBehaviour
         if (move == 0)
         {
             anim.SetBool("IsWalk", false);
-
+            movementSound.enabled = false;
         }
         else
         {
+            movementSound.enabled = true;
             if (move > 0)
             {
                 transform.localScale = new Vector3(1, 1, 1);
@@ -49,6 +52,7 @@ public class MisMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            movementSound.enabled = false;
             anim.SetBool("IsJump", true);
             rb.AddForce(Vector2.up * upForce);
             isGrounded = false;
